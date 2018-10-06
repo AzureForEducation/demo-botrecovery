@@ -48,9 +48,9 @@ namespace SendingEmail
             string toEmail = data.toEmail;
             int smtpPort = 587;
             bool smtpEnableSsl = true;
-            string smtpHost = "smtp.sendgrid.net"; // your smtp host
-            string smtpUser = "azure_e964a2c7d193b41dd69b6ca384a56d9c@azure.com"; // your smtp user
-            string smtpPass = "admin@1029384756"; // your smtp password
+            string smtpHost = ""; // your smtp host
+            string smtpUser = ""; // your smtp user
+            string smtpPass = ""; // your smtp password
             string subject = data.subject;
             string message = data.message;
 
@@ -79,7 +79,6 @@ namespace SendingEmail
             client.Host = smtpHost;
             client.Credentials = new System.Net.NetworkCredential(smtpUser, smtpPass);
             mail.Subject = subject;
-            mail.IsBodyHtml = true;
 
             if (isImportantEmail)
             {
