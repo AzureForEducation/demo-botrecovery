@@ -40,9 +40,9 @@ Overall the demo is comprised of five key and distinct parts:
 
 1) **Office 365 Forms Service**: Forms is undoubtedly one of the most useful services available on the portfolio of O365. It is because you can easily create high-end and responsible forms with no development skills. In this demo, we're using Forms to create the assessment form. The one whereby students will send their thoughts to our fictitious Americas University. The image below shows the form already up and running.
 
-    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form.PNG" width="600" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form.PNG" width="800" />
 
-2) **Office 365 Flow Service**:
+2) **Office 365 Flow Service**: Flow is an integration service available on Office 365. By using it you will be able create behavior based in events hapening along the running process under your subscription. In this demo we're using Flow to direct every single response lending from that assessment form to an existing SQL Database on Azure.
 
 3) **Azure SQL Database**:
 
