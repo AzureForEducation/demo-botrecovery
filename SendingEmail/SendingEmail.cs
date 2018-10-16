@@ -48,9 +48,9 @@ namespace SendingEmail
             string toEmail = data.toEmail;
             int smtpPort = 587;
             bool smtpEnableSsl = true;
-            string smtpHost = ""; // your smtp host
-            string smtpUser = ""; // your smtp user
-            string smtpPass = ""; // your smtp password
+            string smtpHost = "{smtp endpoint here}"; // your smtp host
+            string smtpUser = "{smtp user here}"; // your smtp user
+            string smtpPass = "{smtp password here}"; // your smtp password
             string subject = data.subject;
             string message = data.message;
 
@@ -79,6 +79,7 @@ namespace SendingEmail
             client.Host = smtpHost;
             client.Credentials = new System.Net.NetworkCredential(smtpUser, smtpPass);
             mail.Subject = subject;
+            mail.IsBodyHtml = true;
 
             if (isImportantEmail)
             {
@@ -101,6 +102,8 @@ namespace SendingEmail
 
         public static bool ValidationPassed(string question1, string question2, string question3, string question4, string question5, string question6, string question7, string question8, string question9, string question10)
         {
+            // Static implementation below. Ideally it should use Sentiment Analisys to automatically identify different # of responses.
+            // Sentiment Analysis implementations is commented below.
             if ((question1 == "Dissatisfied" || question1 == "Very dissatisfied") ||
                    (question2 == "No" || question2 == "Not sure") ||
                    (question3 == "1" || question3 == "2" || question3 == "3" || question3 == "4") ||
@@ -118,9 +121,58 @@ namespace SendingEmail
             {
                 return true;
             }
+
+            /*
+             *  // Calling Sentiment Analysis API to automatically verify the answers sentiment.
+             * 
+             *  // Considering answersList as "List<string> answersList = new List<string>();"
+                foreach(string item in answersList)
+                {
+                    using (var client = new HttpClient())
+                {
+                    // Set up API call
+                    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "{your key here}");
+
+                    var request = 
+                        new { 
+                            documents = new [] { 
+                                new { 
+                                    language = "en", 
+                                    id = "001", 
+                                    item 
+                                    } 
+                                } 
+                            };
+
+                    // Create form data, setting the content type
+                    HttpContent content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+
+                    // Send it to Sentiment endpoint
+                    var sentimentEndpoint = "https://westus2.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment";
+                    var response = await client.PostAsync(sentimentEndpoint, content);
+
+                    // Deserialize json response to dynamic object
+                    dynamic dynamicResponse = JsonConvert.DeserializeObject(await response.Content.ReadAsStringAsync());
+
+                    // Get the score as a number
+                    float score = dynamicResponse.documents[0].score;
+
+                    if(score > 0.5)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                }
+             */
         }
 
         /*
+         * Payload for test purposes
+         * 
          * {
          *   "name":"",
          *   "mail":"",

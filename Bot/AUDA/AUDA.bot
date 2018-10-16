@@ -1,0 +1,41 @@
+{
+  "name": "AUDA",
+  "padlock": "xOu6bHtKwu9v6KsXpXX0sA==!GCk+dWsJ579HbkgEAHsq/xUPmEwPiRvl6rx7IoKowxOQ76wrazgV8COAElAnCwYp",
+  "version": "2.0",
+  "services": [
+    {
+      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "subscriptionId": "9b3db624-2934-44c6-830f-9a17cb92cb4a",
+      "resourceGroup": "demo-botrecovery",
+      "serviceName": "AUDA",
+      "type": "abs",
+      "name": "AUDA",
+      "id": "1"
+    },
+    {
+      "connectionString": "pRZIb8yNggrDkPv+XyB98Q==!ed8IMY/4EMosr5rniCw5w84jOPRwmwiOqNEm60wicM5CyztK4GHbIrr4NhSquvK3WxETBgqBl/hvwCf9xjWe8+LsxykQWlKQ3JHyJxQmTus94/tgWqGH2l16hlRYAHplazYfJueAFpz0J5lsdouEA815SwJ/efgfVnxD21cjGpRIns3k+MZdIl9tABvRLCS3qa8yPudxTZOrzgExjRLD3w==",
+      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "subscriptionId": "9b3db624-2934-44c6-830f-9a17cb92cb4a",
+      "resourceGroup": "demo-botrecovery",
+      "serviceName": "audab31d",
+      "type": "blob",
+      "id": "2"
+    },
+    {
+      "appId": "",
+      "appPassword": "",
+      "endpoint": "http://localhost:3978/api/messages",
+      "type": "endpoint",
+      "name": "development",
+      "id": "3"
+    },
+    {
+      "appId": "3761c5ee-26e0-48e6-82e7-f04214398240",
+      "appPassword": "dpNlmBgoW6T+Z0ghGaqeBQ==!XVwJVuDnrXzP4jjuqIe3r/Nt2XKEUJciXiA8aH88Jh0=",
+      "endpoint": "https://auda.azurewebsites.net/api/messages",
+      "type": "endpoint",
+      "name": "production",
+      "id": "4"
+    }
+  ]
+}
