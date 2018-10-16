@@ -42,7 +42,9 @@ Overall the demo is comprised of five key and distinct parts:
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form.PNG" width="800" />
 
-2) **Office 365 Flow Service**: Flow is an integration service available on Office 365. By using it you will be able create behavior based in events hapening along the running process under your subscription. In this demo we're using Flow to direct every single response lending from that assessment form to an existing SQL Database on Azure.
+2) **Office 365 Flow Service**: Flow is an integration service available on Office 365. By using it, you will be able to create behavior based in events happening along the running process under your subscription. In this demo, we're using Flow to direct every single response lending from that assessment form to an existing SQL Database on Azure.
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/flow.PNG" width="800" />
 
 3) **Azure SQL Database**:
 
