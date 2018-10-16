@@ -18,4 +18,32 @@ By doing this, you would be able to demonstrate how O365 and Azure can be used t
 
 This demo is ideal if you're targeting to present something real on the following scenarios:
 
-* 
+* How to engage students using AI and cloud services.
+* How to integrate O365 and Azure services.
+* How to use O365 Flow to automatize both existing and new routines.
+* How to use Azure Functions integrated with Logic Apps.
+* How to use Sentiment Analysis API to drive system behavior.
+* How to combine O365, Azure Services, and Bot in a single ecosystem.
+
+## How it works
+
+* School/University to create a new form to request student's feedback regarding some specific course/training recently by them.
+* Students to answer that form once providing its input on that regard.
+* Answers are automatically sent to an existing SQL Server database (in this demo this database is running on Azure, but it would be an on-prem environment as well).
+* Each new response is automatically pulled out from the database and is analyzed by a Function which implements an integration with Text Analytics API to detect sentiment on that responses.
+* If a lousy feeling is detected, a mail is dropped to that student asking few more details on that regard in exchange for some benefit.
+* By accepting on being collaborative and clicking in a specific link, the student is directed to a University's web page where a Bot is waiting to collect that details and feed up the database with more information and suggestions.
+
+## Internal view
+
+Overall the demo is comprised of five key and distinct parts:
+
+1) **Office 365 Forms Service**: 
+
+2) **Office 365 Flow Service**:
+
+3) **Azure SQL Database**:
+
+4) **Azure Logic Apps**:
+
+5) **Azure Functions**:
