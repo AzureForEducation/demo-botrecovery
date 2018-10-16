@@ -40,7 +40,7 @@ Overall the demo is comprised of five key and distinct parts:
 
 1) **Office 365 Forms Service**: Forms is undoubtedly one of the most useful services available on the portfolio of O365. It is because you can easily create high-end and responsible forms with no development skills. In this demo, we're using Forms to create the assessment form. The one whereby students will send their thoughts to our fictitious Americas University. The image below shows the form already up and running.
 
-    <img src="" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form.PNG" width="600" />
 
 2) **Office 365 Flow Service**:
 
