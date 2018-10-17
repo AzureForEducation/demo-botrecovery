@@ -60,7 +60,7 @@ Overall the demo is comprised of five key and distinct parts:
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/function.PNG" width="800" />
 
-## How to make this work
+## How to build it?
 
 There is a couple of steps you need to follow up in order to get this demo up and running in your Azure subscription. Let's start with the pre-requisits for that.
 
