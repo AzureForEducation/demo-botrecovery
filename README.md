@@ -27,7 +27,7 @@ This demo is ideal if you're targeting to present something real on the followin
 
 ## How it works
 
-    <img src="" width="" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/recoverybot-arch.png" />
 
 * School/University to create a new form to request student's feedback regarding some specific course/training recently by them.
 * Students to answer that form once providing its input on that regard.
