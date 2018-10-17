@@ -42,11 +42,13 @@ Overall the demo is comprised of five key and distinct parts:
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form.PNG" width="800" />
 
-2) **Office 365 Flow Service**: Flow is an integration service available on Office 365. By using it, you will be able to create behavior based in events happening along the running process under your subscription. In this demo, we're using Flow to direct every single response lending from that assessment form to an existing SQL Database on Azure.
+2) **Office 365 Flow Service**: Flow is an integration service available on Office 365. By using it, you will be able to create behaviors based in events happening along with some running process under your O365 tenant or event outside of it. In this demo, we're using Flow to direct every single response lending from that assessment form to an existing SQL Database on Azure.
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/flow.PNG" width="800" />
 
-3) **Azure SQL Database**:
+3) **Azure SQL Database**: SQL Databases is a high-level and high-scalable service offered by Azure to host SQL Server databases on PaaS model. For the context of this demo, we're going to use an existent SQL database as data repository for the answers sent by Americas University's students. 
+
+    <img src="" width="" />
 
 4) **Azure Logic Apps**:
 
