@@ -62,5 +62,14 @@ Overall the demo is comprised of five key and distinct parts:
 
 ## How to build it?
 
-There is a couple of steps you need to follow up in order to get this demo up and running in your Azure subscription. Let's start with the pre-requisits for that.
+There is a couple of steps you need to follow up in order to get this demo up and running in your Azure subscription. Let's go for it.
 
+### Pre-requisites
+
+To get it done, you will need to have available:
+
+* Azure Subscription with enough credit
+* Either Visual Studio 2017 or Visual Studio Code
+* .NET Core 2.1+
+* Bot framework tools (including emulator)
+* Azure SDK
