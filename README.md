@@ -25,7 +25,7 @@ This demo is ideal if you're targeting to present something real on the followin
 * How to use Sentiment Analysis API to drive system behavior.
 * How to combine O365, Azure Services, and Bot in a single ecosystem.
 
-## How it works
+## How does it works?
 
 <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/recoverybot-arch.png" width="800" />
 
