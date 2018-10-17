@@ -54,4 +54,6 @@ Overall the demo is comprised of five key and distinct parts:
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/logicapp.PNG" width="800">
 
-5) **Azure Functions**:
+5) **Azure Functions**: Azure Functions is a serverless compute service that enables you to run code-on-demand without having to explicitly provision or manage infrastructure. Use Azure Functions to run a script or piece of code in response to a variety of events. For the context of this demo, we have a function which gets the newest answer sent by the student (actually, Logic App is in charge for that HTTP call), analyses that answer's items and, depending on the result of that analysis, either drop off a mail to that student inviting him to collaborate with Americas University giving a bit more of details or do nothing.
+
+    <img src="" width="800" />
