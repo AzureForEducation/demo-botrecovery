@@ -27,6 +27,8 @@ This demo is ideal if you're targeting to present something real on the followin
 
 ## How it works
 
+    <img src="" width="" />
+
 * School/University to create a new form to request student's feedback regarding some specific course/training recently by them.
 * Students to answer that form once providing its input on that regard.
 * Answers are automatically sent to an existing SQL Server database (in this demo this database is running on Azure, but it would be an on-prem environment as well).
@@ -56,4 +58,9 @@ Overall the demo is comprised of five key and distinct parts:
 
 5) **Azure Functions**: Azure Functions is a serverless compute service that enables you to run code-on-demand without having to explicitly provision or manage infrastructure. Use Azure Functions to run a script or piece of code in response to a variety of events. For the context of this demo, we have a function which gets the newest answer sent by the student (actually, Logic App is in charge for that HTTP call), analyses that answer's items and, depending on the result of that analysis, either drop off a mail to that student inviting him to collaborate with Americas University giving a bit more of details or do nothing.
 
-    <img src="" width="800" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/function.PNG" width="800" />
+
+## How to make this work
+
+There is a couple of steps you need to follow up in order to get this demo up and running in your Azure subscription. Let's start with the pre-requisits for that.
+
