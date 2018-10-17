@@ -66,10 +66,12 @@ There is a couple of steps you need to follow up in order to get this demo up an
 
 ### Pre-requisites
 
-To get it done, you will need to have available:
+To get it done, you will need to have available in your local machine:
 
-* Azure Subscription with enough credit
-* Either Visual Studio 2017 or Visual Studio Code
-* .NET Core 2.1+
-* Bot framework tools (including emulator)
-* Azure SDK
+* Azure Subscription with enough credit.
+* Office 365 account.
+* Azure SDK for .NET ([donwload](https://www.microsoft.com/en-us/download/details.aspx?id=54917)).
+* Either Visual Studio 2017 ([download](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15#)) or Visual Studio Code ([download](https://code.visualstudio.com/download)).
+* .NET Core 2.1+ ([download](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)).
+* Bot Builder SDK v4 template for C# ([download](https://botbuilder.myget.org/feed/aitemplates/package/vsix/BotBuilderV4.fbe0fc50-a6f1-4500-82a2-189314b7bea2)).
+* Bot Framework Emulator ([download](https://github.com/Microsoft/BotFramework-Emulator/releases)).
