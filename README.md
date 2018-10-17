@@ -62,7 +62,7 @@ Overall the demo is comprised of five key and distinct parts:
 
 ## How to build it?
 
-There is a couple of steps you need to follow up in order to get this demo up and running in your Azure subscription. Let's go for it.
+There are a couple of steps you need to follow up in order to get this demo up and running in your Azure subscription. Let's go for it.
 
 ### Pre-requisites
 
