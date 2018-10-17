@@ -48,8 +48,10 @@ Overall the demo is comprised of five key and distinct parts:
 
 3) **Azure SQL Database**: SQL Databases is a high-level and high-scalable service offered by Azure to host SQL Server databases on PaaS model. For the context of this demo, we're going to use an existent SQL database as data repository for the answers sent by Americas University's students. 
 
-    <img src="" width="" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/sqldatabase.PNG" width="800" />
 
-4) **Azure Logic Apps**:
+4) **Azure Logic Apps**: Azure Logic Apps is a cloud service that helps you automate and orchestrate tasks, business processes, and workflows when you need to integrate apps, data, systems, and services across enterprises or organizations. On the context of this demo, we are using one logic app to "hear" an specific table in a target database. As soon as a new registry lands on that table, logic app calls a Azure Function to do something for us.
+
+    <img src="" width="800">
 
 5) **Azure Functions**:
