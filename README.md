@@ -62,7 +62,7 @@ Overall the demo is comprised of five key and distinct parts:
 
 ## How to build it?
 
-There are a couple of steps you need to follow up in order to get this demo up and running in your Azure subscription. Let's go for it.
+There are a couple of steps you need to follow up to get this demo up and running in your Azure subscription. Let's go for it.
 
 ### Pre-requisites
 
@@ -74,4 +74,44 @@ To get it done, you will need to have available in your local machine:
 * Either Visual Studio 2017 ([download](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15#)) or Visual Studio Code ([download](https://code.visualstudio.com/download)).
 * .NET Core 2.1+ ([download](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)).
 * Bot Builder SDK v4 template for C# ([download](https://botbuilder.myget.org/feed/aitemplates/package/vsix/BotBuilderV4.fbe0fc50-a6f1-4500-82a2-189314b7bea2)).
-* Bot Framework Emulator ([download](https://github.com/Microsoft/BotFramework-Emulator/releases)).
+* Bot Framework Emulator ([download]
+
+### Creating a new SQL database on Azure
+
+Let's start creating the data repository for our demo, I mean, the SQL Database. We're going to use Azure SQL Databases for that. This process is already well described by Azure documentation, so we're just referencing it [here](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database#create-a-blank-sql-database) and assuming that you've followed all those steps carefully to get it done. If everything went well, you should be seeing a new Azure SQL Database through the Azure portal, as shown by the image below.
+
+<img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/sqldatabase.PNG" width="800" />
+
+### Adding a new table into the database
+
+Next step consists on the creation of a new table into the database we just built. There are several ways to accomplish that, however, for the context of this demo, I will use the "Query Editor" feature, provided by the Azure portal.
+
+All you need to do to surpass this step is:
+
+* Once in the blade of your Azure database on Azure portal, click on "Query editor (preview)".
+* Add user and password to get yourself authenticated on the database's context.
+* On the tool context, click at "+ New query". It is going to create a new tab with a code editor under the button you just clicked at.
+* Copy and paste the code below on that area and click at "Run". It is going to create a new table called "AnnualCourseEvaluation" into your database.
+
+    ```sql
+    CREATE TABLE [dbo].[AnnualCourseEvaluations](
+    [Id] [bigint] IDENTITY(1,1) NOT NULL,
+    [SubmissionDate] [datetime] NOT NULL,
+    [Name] [varchar](100) NOT NULL,
+    [Email] [varchar](100) NOT NULL,
+    [AnswerQuestion1] [text] NOT NULL,
+    [AnswerQuestion2] [text] NOT NULL,
+    [AnswerQuestion3] [text] NOT NULL,
+    [AnswerQuestion4] [text] NOT NULL,
+    [AnswerQuestion5] [text] NOT NULL,
+    [AnswerQuestion6] [text] NOT NULL,
+    [AnswerQuestion7] [text] NOT NULL,
+    [AnswerQuestion8] [text] NOT NULL,
+    [AnswerQuestion9] [text] NOT NULL,
+    [AnswerQuestion10] [text] NOT NULL)
+    ```
+That's all.
+
+### Creating a new Form
+
+Time to create our assessment form. We'll do that by navigating to O365 portal and selecting the Forms service.
