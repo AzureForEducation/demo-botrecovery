@@ -183,7 +183,9 @@ There we have four different elements:
 
 ### Creating a Send Grid account
 
-Content.
+Send Grid is a high-scalable service to SMTP messages built by Send Grid on top of Azure. We need to have a Send Grid account set up, once we're going to send SMTP messages to our students through it.
+
+To see how to create a Send Grid account and get User, Password and Keys (we will need both that info later on), please, follow the [steps described in this tutorial](https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email#create-a-sendgrid-account).
 
 ### Creating an Azure Function to evaluate responses and send emails
 
@@ -218,3 +220,13 @@ We called our function "SendingMail". Its code is fully available [here](https:/
 Done. This is all with Functions. Next step? Logic App.
 
 ### Automatizing Function calls with Logic App
+
+The very last thing we need to do to complete our demo flow is create a Logic App. It will act as listener/caller for our database/function. As soon as a  new answer lands into our database, that Logic App will going to call our function passing the new answer to it through a HTTP request. The the function will do what needs to be done.
+
+To get there:
+
+1) To create a new Logic App, please, follow up the steps specificly related to it described on [this tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-twitter-email#create-a-logic-app).
+
+2) Once inside the Logic App just created, click at "Logic App Designer". A blank space will be shown for you to start your integration. First add e new action called "When a new item is created" and add the configuration below.
+
+    <img src="" width="400" />
