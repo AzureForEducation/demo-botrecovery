@@ -114,11 +114,13 @@ That's all.
 
 ### Creating a new Form
 
-Time to create our assessment form. We'll do that by navigating to O365 portal and selecting the Forms service. Once in there, click to create a new form. Then, add the following configuration:
+Time to create our assessment form. We'll do that by navigating to the O365 portal and selecting the Forms service. Once in there, click to create a new form. Then, add the following configuration:
 
 * **Title**: Course's Evaluation - Americas University
-* **Description**: Dear student, this is the annual "Course's Evaluation" initiative promoted by Americas University. We have only one goal with that: do offer the under-graduation courses. Because of this, we ask you to answer this 10 quick questions. It will be extremely valuable for us and will take only 5 min of you time. Thanks!
-* **Qustions**: Add 12 questions respecting the configuration below.
+
+* **Description**: Dear student, this is the annual "Course's Evaluation" initiative promoted by Americas University. We have only one goal with that: do offer the under-graduation courses. Because of this, we ask you to answer this ten quick questions. It will be precious for us and will take only 5 min of your time. Thanks!
+
+* **Questions**: Add 12 questions respecting the configuration below.
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question1.PNG" width="500" />
 
@@ -144,6 +146,11 @@ Time to create our assessment form. We'll do that by navigating to O365 portal a
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question12.PNG" width="500" />
 
-Finally, add the following configuration to the Form itself.
+Finally, apply out the following configuration to the Form itself.
 
-<img src="" width="500" />
+<img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-config.PNG" width="250" />
+
+Done. Our assessment form is up and running. Now, we need to create some mechanism to direct answers sent through that form to our existing database. For that, we're going to create a new Office 365 Flow.
+
+### Creating the integration Flow
+
