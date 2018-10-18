@@ -179,7 +179,11 @@ There we have four different elements:
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/flow-db-binding.PNG" width="400" />
 
-    Done. Now our database should receive the answers sent by the students. Next step? Azure Function.
+    Done. Now our database should receive the answers sent by the students. Next step? Send Grid account.
+
+### Creating a Send Grid account
+
+Content.
 
 ### Creating an Azure Function to evaluate responses and send emails
 
@@ -193,6 +197,24 @@ Two different implementations have been made:
 
 For both cases, if a lousy sentiment is identified, our function is going to send a mail to that student asking for more details. If there's nothing wrong in there, nothing happens.
 
-We called our function "SendingMail". Its code is fully available [here](https://github.com/AzureForEducation/demo-botrecovery/tree/master/SendingEmail).
+We called our function "SendingMail". Its code is fully available [here](https://github.com/AzureForEducation/demo-botrecovery/tree/master/SendingEmail). To publish the function, you should following the steps below.
 
-Now, the only thing we need to do is publish that function to Azure. We could do that in so many different ways; however, we're going to use Visual Studio 2017 for that.
+1) To get that up and running on Azure, the first thing to do is either download or clone this repo to gain access to the function's code, once we will need to a quick adjustment on top of it. You can do that either clicking at that green "Clone or download" button on top of this page or downloading the zip file in which this repo files are packaged off.
+
+2) Once you have it in your machine, open up the file "SendingEmail.sln", placed at the root of the downloaded directory. By doing this, Visual Studio will open up and load up function's files on the right side of the IDE (Solution Explorer).
+
+3) Now we need to update a small portion of code with Send Grid information; otherwise, the function will not be able to send the messages back. To get there, double-click at "SendingEmail.cs". On the code being shown, look for the portion of code presented below.
+
+    ```csharp
+    string smtpHost = "{smtp endpoint here}"; // your smtp host
+    string smtpUser = "{smtp user here}"; // your smtp user
+    string smtpPass = "{smtp password here}"; // your smtp password
+    ```
+
+    Where you see the placeholders, you must add real information from the Send Grid account created earlier in this tutorial. Host, User, and Password are required for the method. Once you have appropriately updated the file,  save (Ctrl + S) and close it.
+
+4) Now, the only thing we need to do is publish that function out into Azure. We could do that in so many different ways; however, we're going to use Visual Studio itself to get there. Please, follow [this link](https://blogs.msdn.microsoft.com/benjaminperkins/2018/04/05/deploy-an-azure-function-created-from-visual-studio/) to see an excellent tutorial explaining how to publish your function.
+
+Done. This is all with Functions. Next step? Logic App.
+
+### Automatizing Function calls with Logic App
