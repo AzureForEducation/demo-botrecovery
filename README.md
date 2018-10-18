@@ -229,4 +229,34 @@ To get there:
 
 2) Once inside the Logic App just created, click at "Logic App Designer". A blank space will be shown for you to start your integration. First add e new action called "When a new item is created" and add the configuration below.
 
-    <img src="" width="400" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/logic-app-block1.PNG" width="500" />
+
+    To get access to your "AnnualCourseEvaluations" table, just click at "..." button on top-right corner and select the connection already inserted when we've created our Flow on O365.
+
+3) As next step, add a Azure Function call as 2nd action and select the Function you've published recently. At the "Request body" field add the following information.
+
+    ```json
+        { 
+            "fromEmail": "no-reply@americasuniversity.com",
+            "isImportant": true,
+            "mail": "@{triggerBody()?['Email']}",
+            "message": "<h2 style=\"color: #2e6c80;\">Hi @{triggerBody()?['Name']},</h2><hr style=\"border: 1px solid #efefef;\" /><p>We're reaching out because we've identified that you seems to be insatisfied with one or more aspects of one of the Americas University's courses and as you know, we are always trying to improve ourselves to offer to our students the best learning conditions.</p><p>This way, we're writing  to ask you for 3 minutes of your time to give us a bit more of context on that regard. Could you please help us out? We're willing to give something in exchange for your valuable help.&nbsp;&nbsp;</p><p>Click the&nbsp;<span style=\"background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 3px;\"><a style=\"color: #ffffff;\" href=\"https://{your url}/digitalassistent.html\">Provide more details</a></span>&nbsp;to talk directly with our digital assistent.</p><p><strong>We much appreciate you attention and williness to help!</strong></p><p>Best,<br />Americas University<br />Quality of Courses Department</p><p><strong>&nbsp;</strong></p>",
+            "name": "@{triggerBody()?['Name']}",
+            "question1": "@{triggerBody()?['AnswerQuestion1']}",
+            "question10": "@{triggerBody()?['AnswerQuestion10']}",
+            "question2": "@{triggerBody()?['AnswerQuestion2']}",
+            "question3": "@{triggerBody()?['AnswerQuestion3']}",
+            "question4": "@{triggerBody()?['AnswerQuestion4']}",
+            "question5": "@{triggerBody()?['AnswerQuestion5']}",
+            "question6": "@{triggerBody()?['AnswerQuestion6']}",
+            "question7": "@{triggerBody()?['AnswerQuestion7']}",
+            "question8": "@{triggerBody()?['AnswerQuestion8']}",
+            "question9": "@{triggerBody()?['AnswerQuestion9']}",
+            "subject": "@{triggerBody()?['Name']}, may we have 3 minutes of your time?",
+            "toEmail": "@{triggerBody()?['Email']}"
+            }
+    ```
+
+    On the end, your call to the Azure Function inside the Logic App should looks like the image below.
+
+    <img src="" width="" />
