@@ -221,19 +221,19 @@ Done. This is all with Functions. Next step? Logic App.
 
 ### Automatizing Function calls with Logic App
 
-The very last thing we need to do to complete our demo flow is create a Logic App. It will act as listener/caller for our database/function. As soon as a  new answer lands into our database, that Logic App will going to call our function passing the new answer to it through a HTTP request. The the function will do what needs to be done.
+The very last thing we need to do to complete our demo flow is to create a Logic App. It will act as a listener/caller for our database/function. As soon as a  new answer lands into our database, that Logic App will go to call our function passing the new answer to it through an HTTP request. The function will do what needs to be done.
 
 To get there:
 
-1) To create a new Logic App, please, follow up the steps specificly related to it described on [this tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-twitter-email#create-a-logic-app).
+1) To create a new Logic App, please, follow up the steps related explicitly to it described on [this tutorial](https://docs.microsoft.com/en-us/azure/azure-functions/functions-twitter-email#create-a-logic-app).
 
-2) Once inside the Logic App just created, click at "Logic App Designer". A blank space will be shown for you to start your integration. First add e new action called "When a new item is created" and add the configuration below.
+2) Once inside the Logic App just created, click at "Logic App Designer". A blank space will be shown for you to start your integration. First, add e new action called "When a new item is created" and add the configuration below.
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/logic-app-block1.PNG" width="500" />
 
-    To get access to your "AnnualCourseEvaluations" table, just click at "..." button on top-right corner and select the connection already inserted when we've created our Flow on O365.
+    To get access to your "AnnualCourseEvaluations" table, just click at "..." button on the top-right corner and select the connection already inserted when we've created our Flow on O365.
 
-3) As next step, add a Azure Function call as 2nd action and select the Function you've published recently. At the "Request body" field add the following information.
+3) As next step, add an Azure Function call as 2nd action and select the Function you've published recently. At the "Request body" field add the following information.
 
     ```json
         { 
@@ -257,10 +257,16 @@ To get there:
             }
     ```
 
-    On the end, your call to the Azure Function inside the Logic App should looks like the image below.
+    On end, your call to the Azure Function inside the Logic App should look like the image below.
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/logic-app-function.PNG" width="400" />
 
-    That's it. Now you can test the whole flow sending some questions through the Form. If everything goes well, you should be receiving a email pretty similar to that one presented by the image below.
+    That's it. Now you can test the whole flow sending some questions through the Form. If everything goes well, you should be receiving an email pretty similar to that one presented by the image below.
 
-    <img src="" width="" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/email.PNG" width="500" />
+
+That's all. Enjoy!
+
+## Help us to improve it
+
+Feel free to send suggestions and send new implementations for it. Just send your pull requests, and it will be accepted. Also, open up issues into the repo if you note something is not working as is meant to be.
