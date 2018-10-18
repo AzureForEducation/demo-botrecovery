@@ -259,4 +259,8 @@ To get there:
 
     On the end, your call to the Azure Function inside the Logic App should looks like the image below.
 
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/logic-app-function.PNG" width="400" />
+
+    That's it. Now you can test the whole flow sending some questions through the Form. If everything goes well, you should be receiving a email pretty similar to that one presented by the image below.
+
     <img src="" width="" />
