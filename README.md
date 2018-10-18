@@ -171,7 +171,7 @@ There we have four different elements:
 
     To get access to you database and table, click at ". . ." button on top of the action and select the option "Add new connection". By doing this, will see a screen like that one presented by the image below. Just add the connection information (available at Azure Portal) to each specific configuration field and then, click in save.
 
-    <img src="" width="" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/flow-db-setting.PNG" width="400" />
 
     Now you should be seeing the connection you just created. Select it to get access the table to where you would like to send the students' answers (in our case, "AnnualCourseEvaluation").
 
