@@ -154,3 +154,10 @@ Done. Our assessment form is up and running. Now, we need to create some mechani
 
 ### Creating the integration Flow
 
+Time to create our integration Flow. Remember: it will play as a "responses replicator", once it will create a new copy of each answer into the existing database. We'll do that by navigating to the O365 portal and selecting the Flow service. Once in there, click at "+ New" > "Create from Blank". It will throw out a new blank space for you to create a new Flow. 
+
+Then, add the following configuration:
+
+* **Title:**: Receives an assessment and ad it into a SQL database
+
+<img src="" width="800" />
