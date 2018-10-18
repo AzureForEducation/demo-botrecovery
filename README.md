@@ -114,4 +114,36 @@ That's all.
 
 ### Creating a new Form
 
-Time to create our assessment form. We'll do that by navigating to O365 portal and selecting the Forms service.
+Time to create our assessment form. We'll do that by navigating to O365 portal and selecting the Forms service. Once in there, click to create a new form. Then, add the following configuration:
+
+* **Title**: Course's Evaluation - Americas University
+* **Description**: Dear student, this is the annual "Course's Evaluation" initiative promoted by Americas University. We have only one goal with that: do offer the under-graduation courses. Because of this, we ask you to answer this 10 quick questions. It will be extremely valuable for us and will take only 5 min of you time. Thanks!
+* **Qustions**: Add 12 questions respecting the configuration below.
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question1.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question2.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question3.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question4.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question5.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question6.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question7.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question8.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question9.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question10.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question11.PNG" width="500" />
+
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/form-question12.PNG" width="500" />
+
+Finally, add the following configuration to the Form itself.
+
+<img src="" width="500" />
