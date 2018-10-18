@@ -180,3 +180,19 @@ There we have four different elements:
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/flow-db-binding.PNG" width="400" />
 
     Done. Now our database should receive the answers sent by the students. Next step? Azure Function.
+
+### Creating an Azure Function to evaluate responses and send mails
+
+The next consists on the automatic evaluation of the responses arriving in our database. The same way, there are several different ways to accomplish that, however, to show the tool set offered by Azure with O365, we're going to create a Azure Function to do that evaluation.
+
+Two different implementations has been made:
+
+1) * **Static (hard-coded)**: we iterate over the answers sent by the students and manually do a verification about the sentiment present in there.
+
+2) * **Text Analytics API (Cognitie Services)**: for each response received, we call the text analytics API (part of Azure Cognitive Services) to automatically identify sentiments.
+
+For both cases, if a bad sentiment is identified, our function is going to send a mail to that student asking for more details. If there's nothing bad in there, nothing happens.
+
+We called our function "SendingMail". Its code is fully available [here](https://github.com/AzureForEducation/demo-botrecovery/tree/master/SendingEmail).
+
+Now, the only thing we need to do is publish that function to Azure. We could do that in so many different ways, however, we're going to use Visual Studio 2017 for that.
