@@ -160,4 +160,21 @@ Then, add the following configuration:
 
 * **Title:**: Receives an assessment and ad it into a SQL database
 
-<img src="" width="800" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/flow-detailed.PNG" width="800" />
+
+There we have four different elements:
+
+1) An Form action triggered "When a new response is submitted". Just select the form you just created.
+2) Then, add an "Apply to each" action. It is because we need to iterate over each response arriving from the form and create a single record at target database. The output will be the "List of responses".
+3) Then, for each response, we need to get the details to create the record at database. This is why we're collecting the "response details". Just select the Form and, the list of columns in there.
+4) Finally, send that "payload" you've created and send it to a specific table into the database. To do that, we'll be using the "Insert row" action, which belongs to SQL Server flow integration. 
+
+    To get access to you database and table, click at ". . ." button on top of the action and select the option "Add new connection". By doing this, will see a screen like that one presented by the image below. Just add the connection information (available at Azure Portal) to each specific configuration field and then, click in save.
+
+    <img src="" width="" />
+
+    Now you should be seeing the connection you just created. Select it to get access the table to where you would like to send the students' answers (in our case, "AnnualCourseEvaluation").
+
+    Next, you'll need to match each Form answer with each table column. Go ahead and do that. On the end you should be seeing something like that image below.
+
+    <img src="" width="" />
