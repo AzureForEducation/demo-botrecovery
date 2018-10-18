@@ -152,9 +152,9 @@ Finally, apply out the following configuration to the Form itself.
 
 Done. Our assessment form is up and running. Now, we need to create some mechanism to direct answers sent through that form to our existing database. For that, we're going to create a new Office 365 Flow.
 
-### Creating the integration Flow
+### Creating the Integration Flow
 
-Time to create our integration Flow. Remember: it will play as a "responses replicator", once it will create a new copy of each answer into the existing database. We'll do that by navigating to the O365 portal and selecting the Flow service. Once in there, click at "+ New" > "Create from Blank". It will throw out a new blank space for you to create a new Flow. 
+Time to create our integration Flow. Remember: it will play as a "responses replicator", once it creates a new copy of each answer into the existing database. We'll do that by navigating to the O365 portal and selecting the Flow service. Once in there, click at "+ New" > "Create from Blank". It will throw out a new blank space for you to create a new Flow. 
 
 Then, add the following configuration:
 
@@ -164,17 +164,19 @@ Then, add the following configuration:
 
 There we have four different elements:
 
-1) An Form action triggered "When a new response is submitted". Just select the form you just created.
-2) Then, add an "Apply to each" action. It is because we need to iterate over each response arriving from the form and create a single record at target database. The output will be the "List of responses".
-3) Then, for each response, we need to get the details to create the record at database. This is why we're collecting the "response details". Just select the Form and, the list of columns in there.
-4) Finally, send that "payload" you've created and send it to a specific table into the database. To do that, we'll be using the "Insert row" action, which belongs to SQL Server flow integration. 
+1) A Form action triggered "When a new response is submitted". Just select the form you just created.
+2) Then, add an "Apply to each" action. It is because we need to iterate over each response arriving from the form and create a single record at the target database. The output will be the "List of responses".
+3) Then, for each response, we need to get the details to create the record at the database. That is why we're collecting the "response details". Just select the Form and, the list of columns in there.
+4) Finally, send that "payload" you've created and sent it to a specific table into the database. To do that, we'll be using the "Insert row" action, which belongs to SQL Server flow integration. 
 
-    To get access to you database and table, click at ". . ." button on top of the action and select the option "Add new connection". By doing this, will see a screen like that one presented by the image below. Just add the connection information (available at Azure Portal) to each specific configuration field and then, click in save.
+    To get access to your database and table, click at ". . ." button on top of the action and select the option "Add new connection". By doing this, will see a screen like that one presented by the image below. Just add the connection information (available at Azure Portal) to each specific configuration field and then, click on save.
 
     <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/flow-db-setting.PNG" width="400" />
 
-    Now you should be seeing the connection you just created. Select it to get access the table to where you would like to send the students' answers (in our case, "AnnualCourseEvaluation").
+    Now you should see the connection you just created. Select it to get access the table to where you would like to send the students' answers (in our case, "AnnualCourseEvaluation").
 
-    Next, you'll need to match each Form answer with each table column. Go ahead and do that. On the end you should be seeing something like that image below.
+    Next, you'll need to match each Form answer with each table column. Go ahead and do that. On end, you should see something like that image below.
 
-    <img src="" width="" />
+    <img src="https://raw.githubusercontent.com/AzureForEducation/demo-botrecovery/master/Img/flow-db-binding.PNG" width="400" />
+
+    Done. Now our database should receive the answers sent by the students. Next step? Azure Function.
